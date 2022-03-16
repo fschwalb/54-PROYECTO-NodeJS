@@ -24,6 +24,9 @@ app.use( (req, res, next) => {
     next();
 });
 
+// Agregar body parser para leer los datos del form
+app.use( express.urlencoded( {extended: true} ) );
+
 // Definir la carpeta pública
 app.use( express.static('public') );
 
