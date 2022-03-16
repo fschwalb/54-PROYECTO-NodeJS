@@ -1,0 +1,33 @@
+extends ./layout/index
+
+block contenido 
+    main.container.mt-5 
+        .row 
+            .col-md-5 
+                img(src="img/nosotros.jpg", alt="imagen nosotros", class="img-fluid")
+
+            .col-md-7 
+                h1= pagina
+                blockquote Morbi elementum lacus sit amet tempus elementum. Donec ut augue eu leo convallis varius vel et nulla. Suspendisse interdum, diam eu volutpat ornare, diam urna rutrum tellus, et ultricies est elit sit amet ligula. Praesent in mauris consequat, ultricies lectus quis, rhoncus arcu.
+
+                p Sed sit amet maximus massa. Vestibulum mollis erat non risus euismod, sit amet sodales ligula interdum. Proin consequat sapien et finibus venenatis. Suspendisse potenti. 
+
+                p Ut sed nisl a tortor pulvinar pretium. Donec nec viverra nisi. Duis eleifend porta neque. Curabitur fermentum maximus tellus, in ultricies nisl porttitor a. Vestibulum vulputate consequat pharetra.
+
+    .listado-iconos 
+        .container.mt-5.py-5.text-center 
+            .row
+                .col-md-4
+                    img(src="img/icono_seguridad.svg", alt="icono seguridad", class="img-fluid mb-4")
+                    h2.mb-4 Seguridad 
+                    p Nulla vitae porttitor tortor. Phasellus at malesuada felis. Nam varius accumsan tellus. Nullam lobortis dictum justo nec dapibus. Nulla et nisl felis.
+
+                .col-md-4
+                    img(src="img/icono_destinos.svg", alt="icono destinos", class="img-fluid mb-4")
+                    h2.mb-4 Mejores Destinos
+                    p Nulla vitae porttitor tortor. Phasellus at malesuada felis. Nam varius accumsan tellus. Nullam lobortis dictum justo nec dapibus. Nulla et nisl felis.
+                    
+                .col-md-4
+                    img(src="img/icono_precios.svg", alt="icono precios", class="img-fluid mb-4")
+                    h2.mb-4 Mejores Precios
+                    p Nulla vitae porttitor tortor. Phasellus at malesuada felis. Nam varius accumsan tellus. Nullam lobortis dictum justo nec dapibus. Nulla et nisl felis.
