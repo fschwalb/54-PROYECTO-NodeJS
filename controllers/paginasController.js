@@ -1,12 +1,21 @@
 import { Viaje } from "../models/Viaje.js";
 import { Testimonial } from "../models/Testimoniales.js";
 
-const paginaInicio = ( req, res ) => { // req - lo que enviamos : res - lo que express nos responde
+const paginaInicio = async ( req, res ) => { // req - lo que enviamos : res - lo que express nos responde
 
-    res.render( 'inicio', {
-        pagina: 'Inicio',
-        clase: 'home'
-    });
+    // Consultar 3 ciajes del modelo Viaje
+    try {
+        const viajes = await Viaje.findAll({ limit: 3 });
+
+        res.render( 'inicio', {
+            pagina: 'Inicio',
+            clase: 'home',
+            viajes
+        });  
+    } catch (error) {
+        console.log(error);
+    };
+    
 };
 
 const paginaNosotros = ( req, res ) => { // req - lo que enviamos : res - lo que express nos responde
@@ -41,7 +50,6 @@ const paginaTestimoniales = async ( req, res ) => { // req - lo que enviamos : r
     } catch (error) {
         console.log(error);
     };
-
     
 };
 
@@ -58,7 +66,7 @@ const paginaDetalleViaje = async ( req, res ) => {
             viaje
         })
     } catch (error) {
-        
+        console.log(error);
     };
 };
 
